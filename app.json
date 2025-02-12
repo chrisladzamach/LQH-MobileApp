@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "LQH-MobileApp",
-    "slug": "LQH-MobileApp",
+    "name": "LQHApp",
+    "slug": "LQHApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

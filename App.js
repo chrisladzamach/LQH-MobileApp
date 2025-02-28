@@ -10,7 +10,7 @@ import {
   TextInput,
   StatusBar,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
+// import { LinearGradient } from "expo-linear-gradient";
 import { MaterialIcons, MaterialCommunityIcons } from "@expo/vector-icons";
 
 const ThemeContext = createContext({

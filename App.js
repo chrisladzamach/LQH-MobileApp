@@ -2593,7 +2593,7 @@ const SubSectionScreen = ({ section, onBack, onSubSectionSelect }) => {
               <MaterialIcons
                 name="chevron-right"
                 size={24}
-                color={isDark ? "#fff" : "#333"}
+                color={isDark ? "#eee" : "#333"}
               />
             </TouchableOpacity>
           ))}

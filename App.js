@@ -5,12 +5,13 @@ import {
   Text,
   TextInput,
   StatusBar,
-  StyleSheet,
   ScrollView,
   SafeAreaView,
   TouchableOpacity,
+  Image,
 } from "react-native";
 import { mainSections } from "./src/data/MainSections";
+import { styles } from "./src/styles/styles";
 
 const ThemeContext = createContext({
   isDark: false,
@@ -88,6 +89,7 @@ const MainScreen = ({ onSectionSelect, onSearchResultSelect }) => {
       <StatusBar style={isDark ? "light" : "dark"} />
       <SafeAreaView style={[styles.container, isDark && styles.darkContainer]}>
         <View style={[styles.header, isDark && styles.darkHeader]}>
+          <Image source={require("./assets/logoJDK.png")} style={styles.logo} />
           <Text style={[styles.headerTitle, isDark && styles.darkText]}>
             LQHApp
           </Text>
@@ -435,187 +437,3 @@ export default function MartialArtsApp() {
     </ThemeContext.Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  ...styles,
-  tableContainer: {
-    margin: 10,
-    borderRadius: 8,
-    overflow: "hidden",
-    backgroundColor: "#eee",
-  },
-  tableHeader: {
-    flexDirection: "row",
-    backgroundColor: "#2c3e50",
-    padding: 10,
-  },
-  headerCell: {
-    color: "#eee",
-    fontWeight: "bold",
-    fontSize: 16,
-  },
-  tableRow: {
-    flexDirection: "row",
-    borderBottomWidth: 1,
-    borderBottomColor: "#eee",
-    minHeight: 50,
-  },
-  cell: {
-    padding: 10,
-    justifyContent: "center",
-  },
-  colorCell: {
-    width: "100%",
-    height: "100%",
-    borderWidth: 1,
-    borderColor: "#ddd",
-    position: "relative",
-    minHeight: 40,
-  },
-  danLine: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    height: 2,
-  },
-  appContainer: {
-    flex: 1,
-    backgroundColor: "#f5f5f5",
-  },
-  container: {
-    flex: 1,
-    backgroundColor: "#ccc",
-  },
-  darkContainer: {
-    backgroundColor: "#000c18",
-  },
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 10,
-    backgroundColor: "#2c3e50",
-    elevation: 4,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 2,
-  },
-  darkHeader: {
-    backgroundColor: "#10192c",
-  },
-  backButton: {
-    marginRight: 16,
-    padding: 8,
-  },
-  headerTitle: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "#ccc",
-    flex: 1,
-    left: 10,
-  },
-  darkText: {
-    color: "#ddd",
-  },
-  content: {
-    flex: 1,
-  },
-  sectionButton: {
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 16,
-    backgroundColor: "#ddd",
-    marginHorizontal: 8,
-    marginVertical: 4,
-    borderRadius: 8,
-    elevation: 2,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.2,
-    shadowRadius: 2,
-  },
-  darkSectionButton: {
-    backgroundColor: "#2a2f3a",
-  },
-  sectionButtonText: {
-    flex: 1,
-    fontSize: 16,
-    marginLeft: 12,
-    color: "#333",
-  },
-  contentContainer: {
-    padding: 16,
-    backgroundColor: "#ddd",
-    margin: 8,
-    borderRadius: 8,
-    elevation: 2,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.2,
-    shadowRadius: 2,
-  },
-  darkContentContainer: {
-    backgroundColor: "#2a2f3a",
-  },
-  contentText: {
-    fontSize: 16,
-    lineHeight: 24,
-    color: "#333",
-  },
-  themeToggle: {
-    padding: 8, 
-  },
-  searchContainer: {
-    padding: 8,
-    backgroundColor: "transparent",
-  },
-  searchInput: {
-    height: 40,
-    backgroundColor: "#ddd",
-    borderRadius: 8,
-    paddingHorizontal: 16,
-    fontSize: 16,
-    borderWidth: 1,
-    borderColor: "#ddd",
-  },
-  darkSearchInput: {
-    backgroundColor: "#2a2f3a",
-    borderColor: "#444",
-    color: "#eee",
-  },
-  searchResults: {
-    position: "absolute",
-    top: 130,
-    left: 8,
-    right: 8,
-    maxHeight: "80%",
-    backgroundColor: "#eee",
-    borderRadius: 8,
-    elevation: 4,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    zIndex: 1000,
-  },
-  darkSearchResults: {
-    backgroundColor: "#2a2a2a",
-  },
-  searchResultItem: {
-    padding: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: "#eee",
-  },
-  darkSearchResultItem: {
-    borderBottomColor: "#444",
-  },
-  searchResultSection: {
-    fontSize: 14,
-    color: "#666",
-    marginBottom: 4,
-  },
-  searchResultTitle: {
-    fontSize: 16,
-    color: "#333",
-  },
-});

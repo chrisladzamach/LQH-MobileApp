@@ -487,7 +487,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ccc",
   },
   darkContainer: {
-    backgroundColor: "#121212",
+    backgroundColor: "#000c18",
   },
   header: {
     flexDirection: "row",
@@ -501,7 +501,7 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
   },
   darkHeader: {
-    backgroundColor: "#1a1a1a",
+    backgroundColor: "#10192c",
   },
   backButton: {
     marginRight: 16,
@@ -535,7 +535,7 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
   },
   darkSectionButton: {
-    backgroundColor: "#2a2a2a",
+    backgroundColor: "#2a2f3a",
   },
   sectionButtonText: {
     flex: 1,
@@ -555,7 +555,7 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
   },
   darkContentContainer: {
-    backgroundColor: "#2a2a2a",
+    backgroundColor: "#2a2f3a",
   },
   contentText: {
     fontSize: 16,
@@ -563,7 +563,7 @@ const styles = StyleSheet.create({
     color: "#333",
   },
   themeToggle: {
-    padding: 8,
+    padding: 8, 
   },
   searchContainer: {
     padding: 8,
@@ -579,7 +579,7 @@ const styles = StyleSheet.create({
     borderColor: "#ddd",
   },
   darkSearchInput: {
-    backgroundColor: "#2a2a2a",
+    backgroundColor: "#2a2f3a",
     borderColor: "#444",
     color: "#eee",
   },

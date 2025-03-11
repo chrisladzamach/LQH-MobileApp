@@ -7,7 +7,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from "react-native";
-import { useTheme } from "../context/ThemeContext";
+// import { useTheme } from "../context/ThemeContext";
 import { styles } from "../styles/styles";
 
 const ContentScreen = ({ subSection, onBack }) => {

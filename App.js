@@ -1,4 +1,3 @@
-import React from "react";
 import { View } from "react-native";
 import { ThemeProvider } from "./src/contexts/ThemeContext";
 import { AppNavigator } from "./src/navigation/AppNavigator";

@@ -33,7 +33,6 @@ export const ThemeProvider = ({ children }) => {
   const toggleUseSystemTheme = () => {
     setUseSystemTheme((prev) => !prev);
     if (!useSystemTheme) {
-      // When switching back to system theme, immediately adopt system preference
       setIsDark(Appearance.getColorScheme() === "dark");
     }
   };

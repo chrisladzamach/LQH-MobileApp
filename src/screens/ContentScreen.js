@@ -11,7 +11,11 @@ const ContentScreen = ({ section, subSection, onBack }) => {
   return (
     <View style={[styles.container, isDark && styles.darkContainer]}>
       <SafeAreaView style={[styles.container, isDark && styles.darkContainer]}>
-        <Header title={subSection?.title || subSection?.name} isDark={isDark} onBack={onBack} />
+        <Header
+          title={subSection?.title || subSection?.name}
+          isDark={isDark}
+          onBack={onBack}
+        />
         <ScrollView style={styles.content}>
           <View
             style={[
@@ -33,7 +37,8 @@ const ContentScreen = ({ section, subSection, onBack }) => {
                 <Text style={[styles.contentText, isDark && styles.darkText]}>
                   {`Significado:\n${subSection.significado}`}
                 </Text>
-                {subSection?.sections && subSection?.sections.map((section, index) => (
+                {subSection?.sections &&
+                  subSection?.sections.map((section, index) => (
                     <View key={index} style={{ marginVertical: 10 }}>
                       <Text
                         style={[
@@ -44,7 +49,8 @@ const ContentScreen = ({ section, subSection, onBack }) => {
                       >
                         {section.title}
                       </Text>
-                    {section?.content && section?.content.map((content, i) => (
+                      {section?.content &&
+                        section?.content.map((content, i) => (
                           <Text
                             key={i}
                             style={[
@@ -61,14 +67,14 @@ const ContentScreen = ({ section, subSection, onBack }) => {
             ) : (
               <>
                 <Text style={[styles.contentText, isDark && styles.darkText]}>
-                {subSection?.title || subSection?.name}
+                  {subSection?.title || subSection?.name}
                 </Text>
                 {subSection?.content ? (
                   <View>
                     <Text
                       style={[styles.contentText, isDark && styles.darkText]}
                     >
-                    {subSection?.content}
+                      {subSection?.content}
                     </Text>
                   </View>
                 ) : subSection?.grado ? (
@@ -76,7 +82,7 @@ const ContentScreen = ({ section, subSection, onBack }) => {
                     <Text
                       style={[styles.contentText, isDark && styles.darkText]}
                     >
-                    {subSection?.grado}
+                      {subSection?.grado}
                     </Text>
                     <View
                       style={{
@@ -90,7 +96,7 @@ const ContentScreen = ({ section, subSection, onBack }) => {
                       <View
                         style={{
                           flex: 1,
-                        backgroundColor: subSection?.color?.[0],
+                          backgroundColor: subSection?.color?.[0],
                           width: 358,
                           height: 10,
                         }}
@@ -98,7 +104,7 @@ const ContentScreen = ({ section, subSection, onBack }) => {
                       <View
                         style={{
                           flex: 1,
-                        backgroundColor: subSection?.color?.[1],
+                          backgroundColor: subSection?.color?.[1],
                           width: 358,
                           height: 10,
                         }}
@@ -107,16 +113,17 @@ const ContentScreen = ({ section, subSection, onBack }) => {
                     <Text
                       style={[styles.contentText, isDark && styles.darkText]}
                     >
-                    {subSection?.rango}
+                      {subSection?.rango}
                     </Text>
                     <Text
                       style={[styles.contentText, isDark && styles.darkText]}
                     >
-                    {subSection?.significado}
+                      {subSection?.significado}
                     </Text>
                   </View>
                 ) : null}
-                {subSection?.sections && subSection?.sections.map((section, index) => (
+                {subSection?.sections &&
+                  subSection?.sections.map((section, index) => (
                     <View key={index} style={{ marginVertical: 10 }}>
                       <Text
                         style={[
@@ -127,7 +134,7 @@ const ContentScreen = ({ section, subSection, onBack }) => {
                       >
                         {section.title}
                       </Text>
-                    {section?.content?.map((content, i) => (
+                      {section?.content?.map((content, i) => (
                         <Text
                           key={i}
                           style={[
@@ -148,4 +155,4 @@ const ContentScreen = ({ section, subSection, onBack }) => {
     </View>
   );
 };
-export default ContentScreen; 
+export default ContentScreen;

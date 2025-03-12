@@ -1,10 +1,10 @@
 // import React from "react";
-// import { 
-// View, 
-// Text, 
-// ScrollView, 
-// SafeAreaView, 
-// TouchableOpacity 
+// import {
+// View,
+// Text,
+// ScrollView,
+// SafeAreaView,
+// TouchableOpacity
 // } from "react-native";
 // import { MaterialIcons } from "@expo/vector-icons";
 // import styles from "../styles/styles";
@@ -59,9 +59,14 @@
 
 // export default SubSectionScreen;
 
-
 import React, { useContext } from "react";
-import { View, Text, SafeAreaView, ScrollView, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { styles } from "../styles/styles";
 import { ThemeContext } from "../contexts/ThemeContext";
@@ -81,7 +86,9 @@ const SubSectionScreen = ({ section, onBack, onSubSectionSelect }) => {
               style={[styles.sectionButton, isDark && styles.darkSectionButton]}
               onPress={() => onSubSectionSelect(subSection)}
             >
-              <Text style={[styles.sectionButtonText, isDark && styles.darkText]}>
+              <Text
+                style={[styles.sectionButtonText, isDark && styles.darkText]}
+              >
                 {subSection.title || subSection.name}
               </Text>
               <MaterialIcons
